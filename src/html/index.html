@@ -4,18 +4,19 @@
     <title>About</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no"/>
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/grid.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/jquery.fancybox.css"/>
-    <link rel="stylesheet" href="../css/camera.css"/>
-    <link rel="stylesheet" href="../css/contact-form.css"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles3.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="css/camera.css"/>
+    <link rel="stylesheet" href="css/contact-form.css"/>
 
-    <script src="../js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
-    <script src="../js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
     
-    <script src='../js/raphael/raphael.js'></script>
+    <script src='js/raphael/raphael.js'></script>
 
     <!--[if lt IE 9]>
     <html class="lt-ie9">
@@ -28,14 +29,14 @@
     <script src="../js/html5shiv.js"></script>
     <![endif]-->
 
-    <script src='../js/device.min.js'></script>
+    <script src='js/device.min.js'></script>
 </head>
 
 <body>
 <div class="page">
     <div class="page-loader">
         <div class="page-loader_cnt">
-            <img src="../images/page-loader.gif" alt=""/><br/>
+            <img src="images/page-loader.gif" alt=""/><br/>
             Loading...
         </div>
     </div>
@@ -69,7 +70,7 @@
             </div>
             <div class="search-form">
                 <div class="container">
-                    <form id="search" action="../search.php" method="GET"
+                    <form id="search" action="search.php" method="GET"
                           accept-charset="utf-8">
                         <label class="input" for="in">
                             <input id="in" type="text" name="s" placeholder="Introduce tu búsqueda aquí..."/>
@@ -93,29 +94,28 @@
                     </p>
                 </div>
 
-                
-                <ul class="inline-list">
-                    {% if session["user"] %}
-                        <!-- Si el usuario está logueado, muestra su nombre -->
+                   
+                    <ul class="inline-list">
                         <li>
-                            <a href="#">{{ session["user"] }}</a>
+                            <a id="welcome-message"></a>
                         </li>
-                    {% else %}
-                        <!-- Si el usuario no está logueado, muestra el enlace Login -->
+
                         <li>
-                            <a href="login.html">Login</a>
+                            <a id="logout" href="/logout"></a>
                         </li>
-                    {% endif %}
-                    
-                    <li>
-                        <a href="#">Ayuda</a>
-                    </li>
-                    <li>
-                        <a href="register.html">registro newsletter</a>
-                    </li>
-                </ul>
-                
-                
+
+                        <li>
+                            <a id="login" href="/login">Iniciar sesión</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Ayuda</a>
+                        </li>
+
+                        <li>
+                            <a href="/register">Registro newsletter</a>
+                        </li>
+                    </ul>
             </div>
         </div>
 
@@ -128,15 +128,15 @@
         <div id="about">
             <div class="camera_container">
                 <div id="camera" class="camera_wrap">
-                    <div data-src="banner/page-1_slide01.jpg"></div>
-                    <div data-src="banner/page-1_slide02.jpg"></div>
-                    <div data-src="banner/page-1_slide03.jpg"></div>
+                    <div data-src="images/page-1_slide01.jpg"></div>
+                    <div data-src="images/page-1_slide02.jpg"></div>
+                    <div data-src="images/page-1_slide03.jpg"></div>
                 </div>
             </div>
 
             <div class="bg1">
                 <div class="container well center">
-                    <div class="row row1">
+                    <div class="row">
                         <div class="grid_4">
                             <div class="icon-1"></div>
                             <h5>Panadería</h5>
@@ -181,7 +181,6 @@
                 <div class="container well3 center wow fadeInUp" data-wow-delay="0.2s">
                     <h3 class="secondary1">Productos más vendidos</h3>
 
-                    <div class="text1">Develop your business in consumer packaged goods</div>
 
                     <ul class="fullwidth-list">
                         <li>
@@ -228,51 +227,36 @@
                     <div class="grid_6 wow fadeInLeft" data-wow-delay="0.2s">
                         <div class="fa fa-group secondary1"></div>
                         <h4 class="secondary1">
-                            <a href="#">consectetuer</a>
+                            <a href="#">Comunidad</a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consuer ad. Fusce suscipit varius mi. Cum sociis natoque
-                            penatibus et
-                            magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada
-                            odio.
-                            Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac
-                            sem.</p>
+                        <p>En Salud y Bienestar, nos esforzamos por construir una comunidad unida, ofreciendo productos 
+                            que mejoran la calidad de vida y fomentan el bienestar colectivo.</p>
                     </div>
                     <div class="grid_6 wow fadeInLeft" data-wow-delay="0.4s">
                         <div class="fa fa-leaf secondary2"></div>
                         <h4 class="secondary2">
-                            <a href="#">Praesent</a>
+                            <a href="#">Sostenibilidad</a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consuer ad. Fusce suscipit varius mi. Cum sociis natoque
-                            penatibus et
-                            magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada
-                            odio.
-                            Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac
-                            sem.</p>
+                        <p>Nos comprometemos con el medio ambiente mediante la promoción de productos locales y sostenibles. 
+                            Juntos cuidamos nuestro planeta para las futuras generaciones.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="grid_6 wow fadeInRight" data-wow-delay="0.2s">
                         <div class="fa fa-lightbulb-o secondary3"></div>
                         <h4 class="secondary3">
-                            <a href="#">adipiscing elit</a>
+                            <a href="#">Innovación</a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consuer ad. Fusce suscipit varius mi. Cum sociis natoque
-                            penatibus et
-                            magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada
-                            odio.
-                            Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac
-                            sem.</p>
+                        <p>Siempre buscamos innovar para ti, ofreciendo herramientas y servicios modernos que hacen tu experiencia 
+                            de compra más fácil y cómoda.</p>
                     </div>
                     <div class="grid_6 wow fadeInRight" data-wow-delay="0.4s">
                         <div class="fa fa-truck primary"></div>
                         <h4 class="primary">
-                            <a href="#">elibulum moles</a>
+                            <a href="#">Logística Eficiente</a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consuer ad. Fusce suscipit varius mi. Cum sociis natoque
-                            penatibus et
-                            magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada
-                            odio.
-                            Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem.
+                        <p>Con un sistema de entregas rápido y seguro, llevamos tus productos favoritos a tu puerta, asegurando 
+                            frescura y calidad en cada pedido.
                         </p>
                     </div>
                 </div>
@@ -281,48 +265,42 @@
 
         <div id="team" class="bg1">
             <div class="container well5 center wow fadeInUp" data-wow-delay="0.2s">
-                <h3>Meet the team</h3>
-
-                <p class="text1 color1">Find out more about our talented and enthusiastic staff</p>
+                <h3>Equipo Directivo</h3>
 
                 <div class="row">
                     <div class="grid_4">
                         <div class="lazy-img" style="padding-bottom: 96.21621621621622%">
-                            <img data-src="../images/page-1_img01.jpg" src="#" alt=""/>
+                            <img data-src="images/page-1_img01.jpg" src="#" alt=""/>
                         </div>
-                        <h5>Robert Smith</h5>
+                        <h5>Carlos Martínez</h5>
 
-                        <p class="text3">Praesent vestibulum</p>
+                        <p class="text3">Jefe de Logística</p>
 
-                        <p>Lorem ipsum dolor sit amet, consuer adipiscing elit. Praesent vestibulum molestie lacus.
-                            Aenean nonummy hendrerit mauris. Phasellus porta.</p>
+                        <p>Carlos es responsable de que cada producto llegue a tiempo y en perfectas condiciones. Su enfoque en la 
+                            eficiencia y precisión hace la diferencia en nuestras entregas.</p>
                     </div>
                     <div class="grid_4">
                         <div class="lazy-img" style="padding-bottom: 96.21621621621622%">
-                            <img data-src="../images/page-1_img02.jpg" src="#" alt=""/>
+                            <img data-src="images/page-1_img02.jpg" src="#" alt=""/>
                         </div>
-                        <h5>Andy Taylor</h5>
+                        <h5>Gonzalo Gutiérrez</h5>
 
-                        <p class="text3">
-                            Praesent vestibulum
-                        </p>
+                        <p class="text3">Gerente General</p>
 
-                        <p>
-                            Lorem ipsum dolor sit amet, consuer adipiscing elit. Praesent vestibulum molestie lacus.
-                            Aenean nonummy hendrerit mauris. Phasellus porta.
-                        </p>
+                        <p>Con más de 10 años de experiencia en el sector, CArlos lidera nuestro equipo para garantizar 
+                            que Salud y Bienestar brinde siempre productos de alta calidad y un servicio excepcional.</p>
                     </div>
                     <div class="grid_4">
                         <div class="lazy-img" style="padding-bottom: 96.21621621621622%">
-                            <img data-src="../images/page-1_img03.jpg" src="#" alt=""/>
+                            <img data-src="images/page-1_img03.jpg" src="#" alt=""/>
                         </div>
-                        <h5>sam White</h5>
+                        <h5>Ana López</h5>
 
-                        <p class="text3">Praesent vestibulum</p>
+                        <p class="text3">Nutricionista Especializada</p>
 
                         <p>
-                            Lorem ipsum dolor sit amet, consuer adipiscing elit. Praesent vestibulum molestie lacus.
-                            Aenean nonummy hendrerit mauris. Phasellus porta.
+                            Ana selecciona cuidadosamente los productos saludables que ofrecemos y está disponible para guiarte 
+                            en tu camino hacia un estilo de vida más saludable.
                         </p>
                     </div>
                 </div>
@@ -453,56 +431,56 @@
                         <div class="gallery">
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery1" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/carne1.jpeg">
+                                   href="images/carne1.jpeg">
                                     <img data-src="../images/carne1.jpeg" src="#" alt="" width="100%" height="50%"/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery1" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/carne2.jpeg">
+                                   href="images/carne2.jpeg">
                                     <img data-src="images/carne2.jpeg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery1" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/carne3.jpeg">
+                                   href=images/carne3.jpeg">
                                     <img data-src="images/carne3.jpeg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery1" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/carne4.jpeg">
+                                   href="images/carne4.jpeg">
                                     <img data-src="images/carne4.jpeg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery1" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/carne5.jpeg">
+                                   href="images/carne5.jpeg">
                                     <img data-src="images/carne5.jpeg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery1" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/carne6.jpeg">
+                                   href="images/carne6.jpeg">
                                     <img data-src="images/carne6.jpeg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery1" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img10_original.jpg">
+                                   href="images/page-1_img10_original.jpg">
                                     <img data-src="images/page-1_img10.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery1" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img11_original.jpg">
+                                   href="images/page-1_img11_original.jpg">
                                     <img data-src="images/page-1_img11.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
@@ -513,56 +491,56 @@
                         <div class="gallery">
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery2" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img07_original.jpg">
+                                   href="images/page-1_img07_original.jpg">
                                     <img data-src="images/page-1_img07.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery2" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img04_original.jpg">
+                                   href="images/page-1_img04_original.jpg">
                                     <img data-src="images/page-1_img04.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery2" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img05_original.jpg">
+                                   href="images/page-1_img05_original.jpg">
                                     <img data-src="images/page-1_img05.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery2" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img06_original.jpg">
+                                   href="images/page-1_img06_original.jpg">
                                     <img data-src="images/page-1_img06.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery2" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img08_original.jpg">
+                                   href="images/page-1_img08_original.jpg">
                                     <img data-src="images/page-1_img08.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery2" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img09_original.jpg">
+                                   href="images/page-1_img09_original.jpg">
                                     <img data-src="images/page-1_img09.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery2" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img10_original.jpg">
+                                   href="images/page-1_img10_original.jpg">
                                     <img data-src="images/page-1_img10.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery2" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img11_original.jpg">
+                                   href="images/page-1_img11_original.jpg">
                                     <img data-src="images/page-1_img11.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
@@ -573,56 +551,56 @@
                         <div class="gallery">
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery3" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img04_original.jpg">
+                                   href="images/page-1_img04_original.jpg">
                                     <img data-src="images/page-1_img04.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery3" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img05_original.jpg">
+                                   href="images/page-1_img05_original.jpg">
                                     <img data-src="images/page-1_img05.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery3" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img09_original.jpg">
+                                   href="images/page-1_img09_original.jpg">
                                     <img data-src="images/page-1_img09.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery3" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img10_original.jpg">
+                                   href="images/page-1_img10_original.jpg">
                                     <img data-src="images/page-1_img10.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery3" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img11_original.jpg">
+                                   href="images/page-1_img11_original.jpg">
                                     <img data-src="images/page-1_img11.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery3" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img06_original.jpg">
+                                   href="images/page-1_img06_original.jpg">
                                     <img data-src="images/page-1_img06.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery3" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img07_original.jpg">
+                                   href="images/page-1_img07_original.jpg">
                                     <img data-src="images/page-1_img07.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery3" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img08_original.jpg">
+                                   href="images/page-1_img08_original.jpg">
                                     <img data-src="images/page-1_img08.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
@@ -633,56 +611,56 @@
                         <div class="gallery">
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery4" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img04_original.jpg">
+                                   href="images/page-1_img04_original.jpg">
                                     <img data-src="images/page-1_img04.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery4" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img05_original.jpg">
+                                   href="images/page-1_img05_original.jpg">
                                     <img data-src="images/page-1_img05.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery4" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img08_original.jpg">
+                                   href="images/page-1_img08_original.jpg">
                                     <img data-src="images/page-1_img08.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery4" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img09_original.jpg">
+                                   href="images/page-1_img09_original.jpg">
                                     <img data-src="images/page-1_img09.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery4" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img10_original.jpg">
+                                   href="images/page-1_img10_original.jpg">
                                     <img data-src="images/page-1_img10.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery4" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img11_original.jpg">
+                                   href="images/page-1_img11_original.jpg">
                                     <img data-src="images/page-1_img11.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery4" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img06_original.jpg">
+                                   href="images/page-1_img06_original.jpg">
                                     <img data-src="images/page-1_img06.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery4" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img07_original.jpg">
+                                   href="images/page-1_img07_original.jpg">
                                     <img data-src="images/page-1_img07.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
@@ -693,56 +671,56 @@
                         <div class="gallery">
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery5" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img04_original.jpg">
+                                   href="images/page-1_img04_original.jpg">
                                     <img data-src="images/page-1_img04.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery5" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img05_original.jpg">
+                                   href="images/page-1_img05_original.jpg">
                                     <img data-src="images/page-1_img05.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery5" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img06_original.jpg">
+                                   href="images/page-1_img06_original.jpg">
                                     <img data-src="images/page-1_img06.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery5" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img07_original.jpg">
+                                   href="images/page-1_img07_original.jpg">
                                     <img data-src="images/page-1_img07.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery5" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img08_original.jpg">
+                                   href="images/page-1_img08_original.jpg">
                                     <img data-src="images/page-1_img08.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery5" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img09_original.jpg">
+                                   href="images/page-1_img09_original.jpg">
                                     <img data-src="images/page-1_img09.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery5" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img11_original.jpg">
+                                   href="images/page-1_img11_original.jpg">
                                     <img data-src="images/page-1_img11.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
                             </div>
                             <div class="gallery_image">
                                 <a class="lazy-img thumb" data-fancybox-group="gallery5" style="padding-bottom: 58.95833333333333%"
-                                   href="../images/page-1_img10_original.jpg">
+                                   href="images/page-1_img10_original.jpg">
                                     <img data-src="images/page-1_img10.jpg" src="#" alt=""/>
                                     <span class="thumb_overlay"></span>
                                 </a>
@@ -758,30 +736,32 @@
                 <h3>Contáctanos</h3>
 
                 <p class="text1">Have more impact on seasonal markets</p>
-
-                <form action="/mensaje" method="POST">
-                    <div class="contact-form1">
-                        <div class="colum-name">
-                            <label class="name"></label>
-                            <input type="text" name="name" id="name" placeholder="Nombre">
+                
+                <div class="div-message">
+               
+                    <form action="/mensaje" method="POST" class="form1">
+                        
+                        <div class="column-name">
+                                <label class="name"></label>
+                                <input type="text" name="name" id="name" placeholder="Nombre">
                         </div> 
-                    
-                        <div class="colum-email">
-                            <label class="email"></label>
-                            <input type="text" name="email" id="email" placeholder="Email"/>
+                        
+                        <div class="column-email">
+                                <label class="email"></label>
+                                <input type="text" name="email" id="email" placeholder="Email"/>
                         </div> 
-                    
+                        
                         <div class="column-message">
-                            <label class="message"></label>
-                            <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+                                <label class="message"></label>
+                                <textarea name="message" id="message" placeholder="Mensaje"></textarea>
                         </div>
-                        <div>
-                            <button type="submit" class="contact_btn">Enviar mensaje</button>
+                        
+                        <div class="column-button">
+                                <button type="submit" class="contact_btn">Enviar mensaje</button>
                         </div>
-
-                    </div>
-                </form>
-
+                        
+                    </form>
+                </div>
                 <div class="row">
                     <div class="grid_4 wow fadeIn" data-wow-delay="0.2s">
                         <blockquote class="quote">
@@ -793,7 +773,7 @@
 
                                 <p class="quote_credits">Mejor cliente 2024</p>
                             </div>
-                            <div class="quote_photo"><img src="../images/page-1_img12.jpg" alt=""/></div>
+                            <div class="quote_photo"><img src="images/page-1_img12.jpg" alt=""/></div>
                         </blockquote>
                     </div>
                     <div class="grid_4 wow fadeIn" data-wow-delay="0.4s">
@@ -807,7 +787,7 @@
 
                                 <p class="quote_credits">Cliente</p>
                             </div>
-                            <div class="quote_photo"><img src="../images/page-1_img13.jpg" alt=""/></div>
+                            <div class="quote_photo"><img src="images/page-1_img13.jpg" alt=""/></div>
                         </blockquote>
                     </div>
                     <div class="grid_4 wow fadeIn" data-wow-delay="0.6s">
@@ -822,7 +802,7 @@
                                 <p class="quote_credits">Cliente</p>
 
                             </div>
-                            <div class="quote_photo"><img src="../images/page-1_img14.jpg" alt=""/></div>
+                            <div class="quote_photo"><img src="images/page-1_img14.jpg" alt=""/></div>
                         </blockquote>
                     </div>
                 </div>
@@ -833,28 +813,28 @@
             <div class="container well9">
                 <ul class="fullwidth-list">
                     <li class="wow fadeIn" data-wow-delay="0.2s">
-                        <a href="#"><img src="../images/page-1_img15.jpg" alt=""/></a>
+                        <a href="#"><img src="images/page-1_img15.jpg" alt=""/></a>
                     </li>
                     <li class="wow fadeIn" data-wow-delay="0.4s">
-                        <a href="#"><img src="../images/page-1_img16.jpg" alt=""/></a>
+                        <a href="#"><img src="images/page-1_img16.jpg" alt=""/></a>
                     </li>
                     <li class="wow fadeIn" data-wow-delay="0.6s">
-                        <a href="#"><img src="../images/page-1_img17.jpg" alt=""/></a>
+                        <a href="#"><img src="images/page-1_img17.jpg" alt=""/></a>
                     </li>
                     <li class="wow fadeIn" data-wow-delay="0.8s">
-                        <a href="#"><img src="../images/page-1_img18.jpg" alt=""/></a>
+                        <a href="#"><img src="images/page-1_img18.jpg" alt=""/></a>
                     </li>
                     <li class="wow fadeIn" data-wow-delay="1s">
-                        <a href="#"><img src="../images/page-1_img19.jpg" alt=""/></a>
+                        <a href="#"><img src="images/page-1_img19.jpg" alt=""/></a>
                     </li>
                     <li class="wow fadeIn" data-wow-delay="1.2s">
-                        <a href="#"><img src="../images/page-1_img20.jpg" alt=""/></a>
+                        <a href="#"><img src="images/page-1_img20.jpg" alt=""/></a>
                     </li>
                     <li class="wow fadeIn" data-wow-delay="1.4s">
-                        <a href="#"><img src="../images/page-1_img21.jpg" alt=""/></a>
+                        <a href="#"><img src="images/page-1_img21.jpg" alt=""/></a>
                     </li>
                     <li class="wow fadeIn" data-wow-delay="1.6s">
-                        <a href="#"><img src="../images/page-1_img22.jpg" alt=""/></a>
+                        <a href="#"><img src="images/page-1_img22.jpg" alt=""/></a>
                     </li>
                 </ul>
             </div>
@@ -883,7 +863,7 @@
                             <a href="#products">Nuestros Productos</a>
                         </li>
                         <li class="active">
-                            <a href="#contacts">COntacto</a>
+                            <a href="#contacts">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -939,6 +919,25 @@
     </footer>
 </div>
 
-<script src="../js/script.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+    var user = '{{global_name}}';
+    console.log("Usuario recibido:", user);  // Imprime en la consola del navegador
+    console.log("Tipo de nombre:", typeof "{{ global_name }}");
+
+    if (!user )
+    {
+        document.getElementById("welcome-message").innerText = "Bienvenido, " + user;
+        document.getElementById("logout").innerText = "Cerrar sesión";
+        document.getElementById("login").innerText = "";
+
+    }
+    else{
+        document.getElementById("login").innerText = "";
+        document.getElementById("login").innerText = "Iniciar sesión";
+    }
+
+</script>
 </body>
 </html>

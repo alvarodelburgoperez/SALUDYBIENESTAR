@@ -1,51 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
-    <link rel="stylesheet" href="../css/styles2.css">
-</head>
-<body>
-    <div id="contacts" class="bg3">
-        <div class="container well8 center">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Registro</title>
+        <link rel="stylesheet" href="css/styles2.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css"/>
+        <link rel="stylesheet" href="css/camera.css"/>
+        <link rel="stylesheet" href="css/contact-form.css"/>
+    </head>
+    <body>
+
+        <!-- Header con la barra de navegación -->
+        <header id="header" class="header">
+            <div id="stuck_container" class="stuck_container">
+                <div class="container">
+                    <nav class="nav">
+                        <ul class="sf-menu">
+                            <li class="active">
+                                <a href="index.html">Inicio</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="search-form-toggle" href="#"></a>
+                </div>
+                <div class="search-form">
+                    <div class="container">
+                        <form id="search" action="search.php" method="GET"
+                              accept-charset="utf-8">
+                            <label class="input" for="in">
+                                <input id="in" type="text" name="s" placeholder="Introduce tu búsqueda aquí..."/>
+                            </label>
+                            <button type="submit" class="fa fa-search"></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            
+    
+        </header>
+
+        <!-- Formulario de Registro -->
+        <div class="div-registro">
             <h3>Regístrate a la newsletter</h3>
 
-            <p class="text1">Have more impact on seasonal markets</p>
-
-            <form id="contact-form" class='contact-form' action="/register" method="POST">
-                <div class="contact-form1">
+            <form id="contact-form" class="contact-form" action="/register" method="POST">
+        
+                <div class="colum-name">
+                    <label>Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre">
+                </div> 
                     
-                    <div class="colum-name">
-                        <label>Nombre</label>
-                        <input type="text" name="name" id="name" placeholder="Nombre">
-                    </div> 
+                <div class="colum-email">
+                    <label>Correo electrónico</label>
+                    <input type="text" name="email" id="email" placeholder="Email"/>
+                </div> 
+                    
+                <div class="column-">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" name="password" required placeholder="Ingrese su contraseña">    
+                </div>
                 
-                    <div class="colum-email">
-                        <label>Correo electrónico</label>
-                        <input type="text" name="email" id="email" placeholder="Email"/>
-                    </div> 
+                <div class="column-">
+                    <label>Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Ingrese su teléfono" >
+                </div>
                 
-                    <div class="column-">
-                        <label>Contraseña</label>
-                        <input type="password" id="password" name="password" required placeholder="Ingrese su contraseña">
-                        
-                    </div>
-                    <div class="column-">
-                        <label>Teléfono</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="Ingrese su teléfono" >
-                    </div>
-                    <div>
-                        <button type="submit">Enviar</button>
-                    </div>
-
+                <div>
+                    <button type="submit">Enviar</button>
                 </div>
             </form>
-
         </div>
-    </div>
 
-    
+        <!-- Incluir Font Awesome para el ícono de búsqueda -->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-</body>
+    </body>
+</html>
+
 </html>
