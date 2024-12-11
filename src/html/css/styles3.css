@@ -1,0 +1,73 @@
+/* Estilos para el contenedor del formulario */
+.div-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form1 {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos de las columnas de entrada */
+.form1 .column-name,
+.form1 .column-email,
+.form1 .column-message,
+.form1 .column-button {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de las etiquetas */
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los inputs de texto y textarea */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Estilo para el botón de enviar */
+.contact_btn {
+    padding: 12px 20px;
+    background-color: #c81d26;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact_btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el área del mensaje (textarea) */
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
