@@ -68,8 +68,8 @@ services:
       - "9187:9187"
     environment:
       DATA_SOURCE_NAME: "postgresql://admin:admin1234@postgres:5432/salud-y-bienestar_db?sslmode=disable"
-      commands:
-        --disable-collectors=stat_bgwriter
+    command:
+      - "--disable-collectors=stat_bgwriter"
     depends_on:
       - postgres
     networks:
